@@ -1,0 +1,209 @@
+#wheel-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 244px;
+    margin: 0 auto;
+}
+
+.wheel-arrow{
+    position: relative;
+    right: 2%;
+}
+
+.wheel{
+    position: relative;
+    left: 18.5px;
+    width: 244px;
+    height: 244px;
+}
+
+.picked-screen{
+    position: absolute;
+    width: 200px;
+    background-color: #F5F5F5;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    top: 50%;
+}
+
+.general-knowledge-spin {
+    animation-name: general-knowledge;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+  
+  @keyframes general-knowledge {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(710deg); /* Change the degrees to adjust the number of rotations */
+    }
+  }
+  
+
+.geography-spin {
+    animation-name: geography;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes geography {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(750deg); /* Change the degrees to adjust the number of rotations */
+    }
+}
+
+.film-tv-spin {
+    animation-name: film-tv;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes film-tv {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(785deg); /* Change the degrees to adjust the number of rotations */
+    }
+}
+
+.history-spin {
+    animation-name: history;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes history {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(823deg); /* Change the degrees to adjust the number of rotations */
+    }
+}
+
+.music-spin {
+    animation-name: music;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes music {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(879deg); /* Change the degrees to adjust the number of rotations */
+    }
+}
+
+.food-drink-spin {
+    animation-name: food-drink;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes food-drink {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(900deg); /* Change the degrees to adjust the number of rotations */
+    }
+}
+
+.science-spin {
+    animation-name: science;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes science {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(925deg); /* Change the degrees to adjust the number of rotations */
+    }
+}
+
+.arts-literature-spin {
+    animation-name: arts-literature;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes arts-literature {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(975deg); /* Change the degrees to adjust the number of rotations */
+    }
+}
+
+.sport-leisure-spin {
+    animation-name: sport-leisure;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sport-leisure {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1000deg); /* Change the degrees to adjust the number of rotations */
+    }
+}
+
+.society-culture-spin {
+    animation-name: society-culture;
+    animation-duration: 6s; /* Change the duration as needed */
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Change the timing function to adjust the acceleration/deceleration */
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+@keyframes society-culture {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1050deg); /* Change the degrees to adjust the number of rotations */
+    }
+}

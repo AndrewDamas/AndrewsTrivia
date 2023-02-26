@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Lato-Title';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url('../fonts/Lato-Light.ttf');
+}
+
+#Home{
+    font-family: 'Lato-Title';
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+#home-title{
+    font-family: "Lato-Light";
+    font-style: normal;
+    font-size: 20px;
+    color: #819CD9;
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+}
+
+#play-game{
+    background: #98FB98;
+    border: 0.368468px solid #D3D3D3;
+    border-radius: 3.68468px;
+}
+
+#difficulty-button{
+    border: 0.31967px solid #D3D3D3;
+    border-radius: 3.1967px;
+}
+
+.set-easy{
+    background: #ADD8E6;
+}
+
+.set-medium{
+    background: #FFE5B4;
+}
+
+.set-hard{
+    background: #FFB6C1;
+}
+
+#leaderboard-button{
+    background: #98FB98;
+    border: 0.31967px solid #D3D3D3;
+    border-radius: 3.1967px;
+}
+
+#rules-button{
+    background: #D3D3D3;
+    border: 0.254122px solid #333333;
+    border-radius: 2.54122px;
+}
