@@ -1,9 +1,68 @@
+@font-face {
+    font-family: 'Lato-Title';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url('../fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Bold";
+    src: url('../fonts/Lato-Bold.ttf');
+}
+
+.hearts-and-score{
+    color: #36454F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 15px auto 0 auto;
+}
+
+.hearts-and-score p{
+    margin: 0;
+    color: #333333ef;
+    font-size: 22px;
+    font-family: "Lato-Title";
+}
+
+.three-hearts{
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.three-hearts img {
+    width: 20px;
+    height: 20px;
+}
+
+.category-spin-wheel-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #819CD9;
+    font-family: "Lato-Light";
+    margin-top: 50px;
+}
+
+.category-spin-wheel-title h2{
+    margin: 0;
+    font-size: 35px;
+}
+
 #wheel-div{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 244px;
+    width: 304px; 
     margin: 0 auto;
+    margin-top: 40px;
 }
 
 .wheel-arrow{
@@ -14,17 +73,69 @@
 .wheel{
     position: relative;
     left: 18.5px;
-    width: 244px;
-    height: 244px;
+    width: 304px;
+    height: 304px;
+}
+
+.spin-button{
+    background-color: #98FB98;
+    font-family: "Lato-Title";
+    width: 240px;
+    color: #36454f;
+    font-size: 22px;
+    height: 51px;
+    border: 1px solid #D3D3D3;
+    border-radius: 3.45652px;
+    margin-top: 35px;
 }
 
 .picked-screen{
     position: absolute;
-    width: 200px;
+    font-family: "Lato-Title";
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #F5F5F5;
     transform: translateX(-50%) translateY(-50%);
     left: 50%;
     top: 50%;
+    border-radius: 9px;
+    box-shadow: 0px 1.80256px 1.80256px rgba(0, 0, 0, 0.25);
+    color: #333333;
+}
+
+.your-cat-is{
+    margin: 0;
+    margin-top: 30px;
+}
+
+.picked-screen-cat{
+    font-family: "Lato-Bold";
+    font-size: 25px;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.picked-screen button{
+    color: #36454F;
+    font-family: "Lato-Title";
+    background: #98FB98;
+    border: 0.269404px solid #D3D3D3;
+    width: 162px;
+    height: 32px;
+    margin-top: 30px;
+    border-radius: 3px;
+}
+
+.black-screen{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.447);
+    width: 100vw;
+    height: 100vh;
 }
 
 .general-knowledge-spin {
@@ -205,5 +316,104 @@
     }
     100% {
         transform: rotate(1050deg); /* Change the degrees to adjust the number of rotations */
+    }
+}
+
+@media only screen and (min-width: 641px){
+    .three-hearts {
+        width: 120px;
+    }
+
+    .three-hearts img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hearts-and-score p {
+        font-size: 32px;
+    }
+
+    .category-spin-wheel-title {
+        flex-direction: row;
+        width: 450px;
+        margin: 0 auto;
+        margin-top: 130px;
+        justify-content: space-between;
+    }
+
+    .category-spin-wheel-title h2{
+        font-size: 40px;
+    }
+
+    #wheel-div {
+        margin-top: 100px;
+        left: 25px;
+    }
+
+    .wheel {
+        width: 475px;
+        height: 475px;
+    }
+
+    .wheel-arrow {
+        width: 45px;
+        height: 35px;
+    }
+
+    .spin-button {
+        width: 300px;
+        font-size: 29px;
+        height: 65px;
+        margin-top: 80px;
+    }
+
+    .picked-screen{
+        width: 450px;
+        height: 300px;
+    }
+
+    .your-cat-is {
+        font-size: 25px;
+        margin-top: 45px;
+    }
+
+    .picked-screen-cat {
+        font-size: 32px;
+        margin-top: 50px;
+    }
+
+    .picked-screen button {
+        width: 230px;
+        height: 45px;
+        margin-top: 45px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1008px){
+
+    .category-spin-wheel-title {
+        margin-top: 15px;
+    }
+
+    #wheel-div {
+        margin-top: 50px;
+    }
+
+    .wheel {
+        width: 325px;
+        height: 325px;
+    }
+
+    .wheel-arrow {
+        width: 35px;
+        height: 22px;
+    }
+
+    .spin-button {
+        width: 260px;
+        font-size: 20px;
+        height: 45px;
+        margin-top: 30px;
     }
 }

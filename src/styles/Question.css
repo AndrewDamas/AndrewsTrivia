@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Lato-Title';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url('../fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Bold";
+    src: url('../fonts/Lato-Bold.ttf');
+}
+
+.Question{
+    user-select: none;
+}
+
+.title-category{
+    font-family: "Lato-Light";
+    font-size: 25px;
+    margin: 0;
+    color: #819CD9;
+    margin-top: 56px;
+}
+
+.question-text{
+    font-family: "Lato-Title";
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 25px;
+    color: #333333;
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    align-items: center;
+}
+
+.answer{
+    background: #ADD8E6;
+    border: 0.310265px solid #D3D3D3;
+    border-radius: 3.10265px;
+    width: 270px;
+    font-size: 16px;
+    min-height: 50px;
+    margin-bottom: 20px;
+    font-family: "Lato-Title";
+    color: #333333;
+}
+
+.seconds p{
+    margin: 0;
+}
+
+.seconds{
+    margin-top: 40px;
+    font-family: "Lato-Title"
+}
+
+.actual-time{
+    font-size: 20px;
+    font-family: "Lato-Bold"
+}
+
+.next{
+    background: none;
+    border: none;
+    margin-top: 40px;
+    font-size: 18px;
+    text-decoration: underline;
+    color: #333333;
+}
+
+.finished{
+    user-select: none;
+}
+
+@media only screen and (min-width: 641px){
+
+    .title-category {
+        font-size: 40px;
+        margin-top: 110px;
+    }
+
+    .question-text {
+        width: 600px;
+        margin-top: 84px;
+        font-size: 24px;
+    }
+
+    .answers {
+        margin-top: 75px;
+    }
+
+    .answer {
+        width: 350px;
+        font-size: 22px;
+        min-height: 65px;
+        margin-bottom: 25px;
+    }
+
+    .next { 
+        margin-top: 45px;
+        font-size: 30px;
+    }
+
+    .time {
+        font-size: 23px;
+    }
+
+    .actual-time {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 1008px){
+
+    .title-category {
+        margin-top: 35px;
+    }
+
+    .question-text {
+        width: 800px;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+
+    .answers {
+        margin-top: 35px;
+    }
+
+    .answer {
+        width: 350px;
+        font-size: 20px;
+        min-height: 55px;
+        margin-bottom: 17px;
+    }
+
+    .seconds {
+        margin-top: 5px;
+    }
+
+    .actual-time {
+        font-size: 25px;
+    }
+
+    .next {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+}

@@ -1,9 +1,8 @@
-import React, {useState, useContext} from 'react';
-import PlayerContext from '../context/PlayerContext';
+import React, {useState, useContext, useEffect} from 'react';
+import PlayerContext, { Question } from '../context/PlayerContext';
 import TriviaAPI from '../services/TriviaAPI';
-import Question from './Question';
 import '../styles/CategorySpinWheel.css';
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useLocation} from "react-router-dom";
 
 export default function CategorySpinWheel() {
     interface Category {
@@ -32,56 +31,133 @@ export default function CategorySpinWheel() {
       
     const [screen, setScreen] = useState("spin");
 
+    const resetSpinResult = () => {
+      setSpinResult(null);
+    };
+
+    const[switching, setSwitching] = useState(false);
+    
+    useEffect(() => {
+      if(switching){
+        spinWheel();
+      }
+    }, [switching])
     const [spinResult, setSpinResult] = useState<Category | null>(null);
     const [isSpinning, setIsSpinning] = useState(false);
     const [randomCategoryClass, setRandomCategoryClass] = useState<string>("");
     const [spinButtonVisible, setSpinButtonVisible] = useState(true);
-
-    const spinWheel = () => {
+    const spinWheel = async () => {   
+      setScreen("spin");
+      // console.log("screen is: " + screen);
+      resetSpinResult();
+      // console.log("spinResult is: " + spinResult);
       setIsSpinning(true);
+      // console.log("isSpinning is: " + isSpinning);
       const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+      // console.log("randomCategory is: " + randomCategory.name);
+      let theQuestion: Question;
       TriviaAPI(randomCategory.uri, difficulty).then(data => {
-        resetCurrentQuestion(data);
+        // console.log("starting TriviaAPI");
+        theQuestion = data;
+        // let loop = false;
+        // console.log('loop = ' + loop)
+        // do{
+        //   console.log('starting loop');
+        //   theQuestion = data;
+        //   console.log('current question is: ' + theQuestion.question);
+        //   console.log('current question id is: ' + theQuestion.id);
+        //   console.log('question difficulty is: ' + theQuestion.difficulty);
+        //   loop = false;
+        //   console.log('loop = ' + loop);
+        //   pastQuestions.forEach(i => {
+        //     console.log("does " + i.id + " match with: "+ currentQuestion?.id);
+        //     if(i.id === theQuestion.id){
+        //       loop = true;
+        //       console.log('yes it does. loop is now: ' + loop);
+        //     } else {
+        //       console.log('no it does not. Loop is now: ' + loop);
+        //     }
+        //   });
+        //   if(loop === false){
+        //     console.log('pushing question to past questions');
+        //     pushPastQuestions(data);
+        //   }
+        // }
+        // while(loop);
+        resetCurrentQuestion(theQuestion);
+        // console.log('question is: ' + currentQuestion?.question);
       })
       setRandomCategoryClass(randomCategory.class);
+      // console.log('loop is over. randomCategoryClass is: '+ randomCategoryClass);
       setTimeout(() => {
-          setSpinResult(randomCategory);
-          setIsSpinning(false);
-          setScreen("chosen");
+        setSpinResult(randomCategory);
+        setIsSpinning(false);
+        setScreen("chosen");
+        setRandomCategoryClass("");
+        // console.log(screen);
       }, 6000);
-  };
+    };
   return (
-    <div>
-      <div>
-        <div>
-            <p>Hearts</p>
-            <p>Score: 200</p>
+    <div className="CategorySpinWheel">
+      <div className="before-chosen">
+        <div className="hearts-and-score">
+            {
+              hearts === 3 ?
+              <div className='three-hearts'>
+                <img src={process.env.PUBLIC_URL + '/images/red-heart.png'} alt="red-heart" />
+                <img src={process.env.PUBLIC_URL + '/images/red-heart.png'} alt="red-heart" />
+                <img src={process.env.PUBLIC_URL + '/images/red-heart.png'} alt="red-heart" />
+              </div>
+              : hearts === 2 ?
+              <div className='three-hearts'>
+                <img src={process.env.PUBLIC_URL + '/images/red-heart.png'} alt="red-heart" />
+                <img src={process.env.PUBLIC_URL + '/images/red-heart.png'} alt="red-heart" />
+                <img src={process.env.PUBLIC_URL + '/images/grey-heart.png'} alt="red-heart" />
+              </div>
+              : hearts === 1 ?
+              <div className='three-hearts'>
+                <img src={process.env.PUBLIC_URL + '/images/red-heart.png'} alt="red-heart" />
+                <img src={process.env.PUBLIC_URL + '/images/grey-heart.png'} alt="red-heart" />
+                <img src={process.env.PUBLIC_URL + '/images/grey-heart.png'} alt="red-heart" />
+              </div>
+              :
+              <div className='three-hearts'>
+                <img src={process.env.PUBLIC_URL + '/images/grey-heart.png'} alt="red-heart" />
+                <img src={process.env.PUBLIC_URL + '/images/grey-heart.png'} alt="red-heart" />
+                <img src={process.env.PUBLIC_URL + '/images/grey-heart.png'} alt="red-heart" />
+              </div>
+            }
+            <p>Score: {score}</p>
         </div>
-        <h2>CATEGORY SPIN WHEEL</h2>
+        <div className='category-spin-wheel-title'>
+          <h2>CATEGORY</h2>
+          <h2>SPIN WHEEL</h2>
+        </div>
         <div id="wheel-div">
           <img src={process.env.PUBLIC_URL + '/images/wheel.png'} alt="spinning image" className={`${randomCategoryClass} wheel`} />
           <img src={process.env.PUBLIC_URL + '/images/WheelArrow.png'} alt="spinning image" className='wheel-arrow'/>
         </div>
         {
           spinButtonVisible && 
-          <button onClick={() => {
+          <button className="spin-button" onClick={() => {
             setSpinButtonVisible(false);
-            spinWheel();
+            setSwitching(true);
           }
           }>SPIN</button>
         }
       </div>
       {
         screen === "chosen" &&
-        <div className='picked-screen'>
-          <p>Your category is:</p>
-          <p>{spinResult?.name}</p>
-          <button onClick={() => {
-            setScreen("spin");
-            setRandomCategoryClass("");
-            setSpinButtonVisible(true);
-            navigate('/question');
-          }}>GO TO QUESTION</button>
+        <div className='black-screen'>
+          <div className='picked-screen'>
+            <p className='your-cat-is'>Your category is:</p>
+            <p className='picked-screen-cat'>{spinResult?.name}</p>
+            <button onClick={async () => {
+              setSpinButtonVisible(true);
+              setSwitching(false);
+              await navigate('/question');
+            }}>GO TO QUESTION</button>
+          </div>
         </div>
       }
     </div>

@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Lato-Title';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url('../fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Bold";
+    src: url('../fonts/Lato-Bold.ttf');
+}
+
+.GameOver h1{
+    color: #819CD9;
+    font-family: "Lato-Light";
+    margin-top: 90px;
+    margin-bottom: 0px;
+    font-size: 45px;
+}
+
+.GameOver p{
+    font-family: "Lato-Title";
+    font-size: 22px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.GameOver form{
+    display: flex;
+    flex-direction: column;
+}
+
+.GameOver form label{
+    font-family: "Lato-Title";
+    font-size: 18px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+
+.GameOver form input{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 15px;
+    height: 30px;
+    border: 0.451423px solid #bcbcbc;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+
+.GameOver form input::placeholder{
+    font-family: "Lato-Title";
+    font-size: 16px;
+    font-style: italic;
+    color: #bcbcbc;
+}
+
+.GameOver form button{
+    background: #ADD8E6;
+    border: 0.264966px solid #D3D3D3;
+    border-radius: 2.64966px;
+    width: 121.88px;
+    height: 31.8px;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-family: "Lato-Title";
+    color: #36454F;
+}
+
+.button-grid{
+    margin-top: 35px;
+}
+
+.button-grid div{
+    width: 350px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.start-new{
+    background: #98FB98;
+    border: 0.264966px solid #D3D3D3;
+    border-radius: 2.64966px;
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-family: "Lato-Title";
+    color: #36454F;
+}
+
+.new-game{
+    background: #ADD8E6;
+    border: 0.264966px solid #D3D3D3;
+    border-radius: 2.64966px;
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    font-family: "Lato-Title";
+    color: #36454F;
+}
+
+@media only screen and (min-width: 641px){
+
+    .GameOver h1 {
+        margin-top: 180px;
+        font-size: 65px;
+    }
+
+    .GameOver p {
+        font-size: 35px;
+        width: 500px;
+        margin-top: 85px;
+    }
+
+    .GameOver form label {
+        font-size: 21px;
+        width: 550px;
+        margin-top: 70px;
+    }
+
+    .GameOver form input {
+        width: 365px;
+        margin-top: 30px;
+        height: 37px;
+        font-size: 19px;
+    }
+
+    .GameOver form input::placeholder {
+        font-size: 19px;
+    }
+
+    .GameOver form button {
+        width: 162.88px;
+        height: 38.8px;
+        margin-top: 20px;
+        font-size: 19px;
+    }
+
+    .start-new {
+        width: 230px;
+        height: 50px;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+    .new-game {
+        width: 230px;
+        height: 50px;
+        margin-top: 35px;
+        font-size: 20px;
+    }
+
+    .button-grid div {
+        width: 515px;
+    }
+}
+
+@media only screen and (min-width: 1008px){
+
+    .GameOver h1 {
+        margin-top: 50px;
+    }
+
+    .GameOver p {
+        font-size: 25px;
+        margin-top: 28px;
+    }
+
+    .GameOver form label {
+        font-size: 19px;
+        margin-top: 23px;
+    }
+
+    .GameOver form input {
+        margin-top: 22px;
+        height: 34px;
+    }
+
+    .button-grid {
+        margin-top: -10px;
+    }
+
+    .new-game {
+        margin-top: 10px;
+    }
+
+}

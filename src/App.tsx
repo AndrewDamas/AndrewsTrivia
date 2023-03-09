@@ -9,6 +9,7 @@ import Leaderboard from './components/Leaderboard';
 import Rules from './components/Rules';
 import CategorySpinWheel from './components/CategorySpinWheel';
 import Question from './components/Question';
+import GameOver from './components/GameOver';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route path='/category_spin_wheel' element={<CategorySpinWheel />} />
           <Route path='/question' element={<Question />} />
           <Route path='/leaderboard' element={<Leaderboard />} />
-          <Route path='/game_over' element={<Rules />} />
+          <Route path='/game_over' element={<GameOver />} />
+          <Route path='/rules' element={<Rules />} />
         </Routes>
       </div>
     </Router>

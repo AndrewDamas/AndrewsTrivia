@@ -11,7 +11,7 @@ export default function PlayerContextProvider({children}: Props) {
     const [hearts, setHearts] = useState<number>(0);
     const [difficulty, setDifficulty] = useState<string>("easy");
     function resetCurrentQuestion(question: Question): void {
-        setCurrentQuestion(question)
+        setCurrentQuestion(question);
     }
     function pushPastQuestions(question: Question): void {
         setPastQuestions(prev => [...prev, question]);
@@ -23,7 +23,7 @@ export default function PlayerContextProvider({children}: Props) {
         setScore(score + 100);
     }
     function resetHearts(): void {
-        setHearts(0);
+        setHearts(3);
     }
     function deleteHeart(): void {
         setHearts(hearts - 1);

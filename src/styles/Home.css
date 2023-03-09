@@ -13,49 +13,160 @@
     display: flex;
     flex-direction: column;
     user-select: none;
+    align-items: center;
+
 }
 
 #home-title{
     font-family: "Lato-Light";
     font-style: normal;
-    font-size: 20px;
+    font-size: 22px;
     color: #819CD9;
     display: flex;
     flex-direction: column;
     line-height: 0px;
+    margin-top: 93px;
 }
 
 #play-game{
     background: #98FB98;
     border: 0.368468px solid #D3D3D3;
     border-radius: 3.68468px;
+    margin-top: 83px;
+    width: 250px;
+    font-size: 22px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #36454fda;
+    font-family: 'Lato-Title';
+}
+
+#play-game:hover{
+    background: #baffba;
 }
 
 #difficulty-button{
     border: 0.31967px solid #D3D3D3;
     border-radius: 3.1967px;
+    margin-top: 64px;
+    font-size: 17px;
+    width: 200px;
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #36454F;
+    font-family: 'Lato-Title';
 }
 
 .set-easy{
     background: #ADD8E6;
 }
 
+.set-easy:hover{
+    background-color: #BFE6F5;
+}
+
 .set-medium{
     background: #FFE5B4;
+}
+
+.set-medium:hover{
+    background: #FFEFD5;
 }
 
 .set-hard{
     background: #FFB6C1;
 }
 
+.set-hard:hover{
+    background: #F6D2C2;
+}
+
 #leaderboard-button{
     background: #98FB98;
     border: 0.31967px solid #D3D3D3;
     border-radius: 3.1967px;
+    margin-top: 22px;
+    width: 200px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #36454F;
+    font-family: 'Lato-Title';
+}
+
+#leaderboard-button:hover{
+    background: #baffba;
 }
 
 #rules-button{
     background: #D3D3D3;
-    border: 0.254122px solid #333333;
+    border: 1px solid #b6b6b6;
     border-radius: 2.54122px;
+    margin-top: 22px;
+    font-size: 16px;
+    width: 160px;
+    color: #36454F;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato-Title';
+}
+
+#rules-button:hover{
+    background: #E8E8E8
+}
+
+@media only screen and (min-width: 641px){
+    #home-title{
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 30px;
+        width: 510px;
+        margin-top: 200px;
+    }
+
+    #play-game {
+        margin-top: 100px;
+        width: 300px;
+        font-size: 27px;
+        height: 70px;
+    }
+
+    #difficulty-button {
+        margin-top: 70px;
+        font-size: 19px;
+        width: 235px;
+        height: 55px;
+    }
+
+    #leaderboard-button {
+        margin-top: 25px;
+        font-size: 19px;
+        width: 235px;
+        height: 55px;
+    }
+
+    #rules-button {
+        margin-top: 30px;
+        font-size: 18px;
+        width: 188px;
+        height: 45px;
+    }
+}
+
+@media only screen and (min-width: 1008px){
+    #home-title {
+        margin-top: 65px;
+    }
+
+    #difficulty-button {
+        margin-top: 30px;
+    }
 }
